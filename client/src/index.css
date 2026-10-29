@@ -1,0 +1,284 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: #f6f7f9;
+  color: #1a1d23;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 20px;
+  background: #16213a;
+  color: white;
+}
+
+.topbar h1 {
+  font-size: 18px;
+  margin: 0;
+  font-weight: 700;
+}
+
+.topbar .brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.balance {
+  font-size: 14px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 6px 12px;
+  border-radius: 8px;
+}
+
+.balance strong {
+  font-size: 16px;
+}
+
+.actor-input {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+}
+
+.actor-input input {
+  padding: 5px 8px;
+  border-radius: 6px;
+  border: none;
+  width: 110px;
+}
+
+.tabs {
+  display: flex;
+  gap: 4px;
+  padding: 0 16px;
+  background: white;
+  border-bottom: 1px solid #e3e6ea;
+}
+
+.tabs button {
+  border: none;
+  background: none;
+  padding: 12px 16px;
+  font-size: 14px;
+  cursor: pointer;
+  color: #5b6472;
+  border-bottom: 2px solid transparent;
+}
+
+.tabs button.active {
+  color: #16213a;
+  font-weight: 600;
+  border-bottom-color: #2b6cff;
+}
+
+.content {
+  flex: 1;
+  overflow: auto;
+  padding: 20px;
+}
+
+.panel {
+  background: white;
+  border-radius: 10px;
+  border: 1px solid #e3e6ea;
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+.add-panel textarea {
+  width: 100%;
+  min-height: 70px;
+  font-size: 14px;
+  padding: 10px;
+  border: 1px solid #d6dae1;
+  border-radius: 8px;
+  resize: vertical;
+  font-family: inherit;
+}
+
+.btn {
+  background: #2b6cff;
+  color: white;
+  border: none;
+  border-radius: 7px;
+  padding: 9px 16px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.btn.secondary {
+  background: #eef1f6;
+  color: #16213a;
+}
+
+.btn.danger {
+  background: #e23e3e;
+}
+
+.btn-row {
+  display: flex;
+  gap: 8px;
+  margin-top: 10px;
+  align-items: center;
+}
+
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.grid-wrap {
+  height: 480px;
+}
+
+.status-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 3px 9px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.status-draft,
+.status-planned {
+  background: #eef1f6;
+  color: #46525f;
+}
+
+.status-flagged {
+  background: #fff1cc;
+  color: #8a5b00;
+}
+
+.status-approved {
+  background: #e2ecff;
+  color: #1a4bbd;
+}
+
+.status-processing {
+  background: #fff6c2;
+  color: #7a6000;
+}
+
+.status-paid {
+  background: #d8f4e3;
+  color: #0e7a3f;
+}
+
+.status-failed {
+  background: #fde1e1;
+  color: #ad1f1f;
+}
+
+.status-reversed {
+  background: #eee;
+  color: #555;
+}
+
+.cell-processing {
+  background: #fff8d6 !important;
+}
+
+.cell-paid {
+  background: #e4f8ec !important;
+}
+
+.cell-failed {
+  background: #fde7e7 !important;
+}
+
+.flag-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.flag-badge {
+  font-size: 11px;
+  background: #fff1cc;
+  color: #7a4a00;
+  border-radius: 4px;
+  padding: 2px 6px;
+  display: inline-block;
+}
+
+.row-actions {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.row-actions button {
+  font-size: 11px;
+  padding: 4px 8px;
+}
+
+.section-title {
+  font-size: 15px;
+  font-weight: 700;
+  margin: 0 0 10px;
+}
+
+.rule-row,
+.contact-row,
+.history-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px solid #f0f1f4;
+  font-size: 13px;
+}
+
+.muted {
+  color: #8a93a0;
+  font-size: 12px;
+}
+
+.error-banner {
+  background: #fde1e1;
+  color: #ad1f1f;
+  padding: 10px 14px;
+  border-radius: 8px;
+  margin-bottom: 14px;
+  font-size: 13px;
+}
+
+.small-form {
+  display: flex;
+  gap: 8px;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+
+.small-form input,
+.small-form select {
+  padding: 7px 9px;
+  border: 1px solid #d6dae1;
+  border-radius: 6px;
+  font-size: 13px;
+}
