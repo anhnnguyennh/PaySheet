@@ -3,5 +3,6 @@ dist/
 build/
 .env
 *.log
+*.tsbuildinfo
 server/data/*.json
 !server/data/.gitkeep
